@@ -46,7 +46,7 @@ const login = async(req,res) =>{
 
     const existingUser = await User.findOne({email});
     if(!existingUser){
-        res.send("user not registred")
+       return res.send("user not registred")
     }
 
 
